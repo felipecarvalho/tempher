@@ -1,0 +1,10 @@
+{
+  "appName": "Tempher",
+  "home": {
+    "inputHint": "Buscar una ciudad"
+  },
+  "about": {
+    "version": "Versión {}",
+    "author": "Designed by Felipe Carvalho"
+  }
+}
