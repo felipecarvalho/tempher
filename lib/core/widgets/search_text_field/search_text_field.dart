@@ -18,7 +18,6 @@ class SearchTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       style: ThemeTextStyle.inputValue,
-      cursorColor: ThemeColors.primaryHigh,
       controller: controller,
       onChanged: (value) => controller.text = value,
       onSubmitted: (_) => onSubmit(),
