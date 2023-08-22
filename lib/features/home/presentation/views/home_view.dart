@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:tempher/core/helpers/helpers.dart';
 import 'package:tempher/core/theme/theme.dart';
@@ -9,6 +8,10 @@ class HomeView extends StatelessWidget {
   final TextEditingController searchController = TextEditingController();
 
   HomeView({super.key});
+
+  submitSearch() {
+    DebugMode.showOnLog(searchController.text);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,27 +46,9 @@ class HomeView extends StatelessWidget {
                       color: ThemeColors.primaryLow,
                       borderRadius: BorderRadius.all(Radius.circular(ThemeMetrics.borderRadius)),
                     ),
-                    child: TextField(
-                      style: ThemeTextStyle.inputValue,
-                      cursorColor: ThemeColors.primaryHigh,
+                    child: SearchTextField(
                       controller: searchController,
-                      onSubmitted: (value) {
-                        searchController.text = value;
-                        print(searchController.text);
-                      },
-                      decoration: InputDecoration(
-                        contentPadding: EdgeInsets.all(ThemeMetrics.inputPaddingVertical),
-                        prefixIcon: Icon(LucideIcons.search, color: ThemeColors.primaryHigh),
-                        hintStyle: ThemeTextStyle.inputHint,
-                        hintText: tr('home.inputHint'),
-                        border: InputBorder.none,
-                        suffix: GestureDetector(
-                          child: Text('Ok', style: ThemeTextStyle.submitLabel),
-                          onTap: () {
-                            print(searchController.text);
-                          },
-                        ),
-                      ),
+                      onSubmit: () => submitSearch(),
                     ),
                   ),
                 ),
