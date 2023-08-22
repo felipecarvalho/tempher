@@ -21,7 +21,6 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   wakelock_plus: ^1.1.1
   # flutter_native_splash: ^2.3.2
-  # Used only to generate a empty splash screen on Android
 
 flutter:
   uses-material-design: true
