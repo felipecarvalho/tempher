@@ -10,7 +10,7 @@ class Root extends StatelessWidget {
   const Root({
     super.key,
     required this.appName,
-  }) : super();
+  });
 
   @override
   Widget build(BuildContext context) {

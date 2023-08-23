@@ -55,6 +55,27 @@ class ThemeTextStyle {
     color: ThemeColors.secondary,
   );
 
+  static TextStyle headline = TextStyle(
+    letterSpacing: letterSpacing,
+    fontSize: ThemeFontSize.maximum,
+    fontWeight: ThemeFontWeight.semiBold,
+    color: ThemeColors.secondary,
+  );
+
+  static TextStyle headline2 = TextStyle(
+    letterSpacing: letterSpacing,
+    fontSize: ThemeFontSize.large,
+    fontWeight: ThemeFontWeight.semiBold,
+    color: ThemeColors.secondary,
+  );
+
+  static TextStyle headline3 = TextStyle(
+    letterSpacing: letterSpacing,
+    fontSize: ThemeFontSize.medium,
+    fontWeight: ThemeFontWeight.semiBold,
+    color: ThemeColors.secondary,
+  );
+
   static TextStyle inputHint = TextStyle(
     letterSpacing: letterSpacing,
     fontSize: ThemeFontSize.normal,

@@ -1,10 +1,23 @@
 {
   "appName": "Tempher",
-  "home": {
-    "inputHint": "Buscar cidade"
+  "weather": {
+    "inputHint": "Buscar cidade",
+    "invalidCity": "Digite uma cidade válida"
+  },
+  "weatherDetails": {
+    "fiveDayForecast": "Previsão de 5 dias"
   },
   "about": {
     "version": "Versão {}",
     "author": "Designed by Felipe Carvalho"
+  },
+  "errors": {
+    "cityNotFound": "Cidade não encontrada, tente novamente",
+    "tempNotFound": "Ocorreu um erro ao obter a temperatura",
+    "forecastNotFound": "Não foi possível trazer carregar as previsões"
+  },
+  "temp": {
+    "max": "Máx",
+    "min": "Mín"
   }
 }

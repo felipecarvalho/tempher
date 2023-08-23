@@ -13,27 +13,30 @@ class DebugMode {
   static void showOnLog(
     String message, {
     Type? className,
+    String? method,
     LogType type = LogType.info,
   }) {
     late String emojiIcon;
+    late String stringType;
 
     switch (type) {
       case LogType.info:
-        message = 'Info: $message';
+        stringType = 'Info:';
         emojiIcon = '🔵';
       case LogType.warning:
-        message = 'Warning: $message';
+        stringType = 'Warning:';
         emojiIcon = '🟡';
       case LogType.error:
-        message = 'Error: $message';
+        stringType = 'Error:';
         emojiIcon = '🔴';
       case LogType.success:
-        message = 'Success: $message';
+        stringType = 'Success:';
         emojiIcon = '🟢';
       default:
     }
 
-    final String handleString = className != null ? '$className => $message' : message;
+    final String handleString =
+        '${className != null ? '=> $className' : ''} $stringType $message ${method != null ? '=> $method' : ''}';
 
     if (kDebugMode) {
       return debugPrint('$emojiIcon [APP] $handleString');
